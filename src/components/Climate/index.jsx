@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
+import './style.css';
 
 import temperature from './images/temp.svg';
 
