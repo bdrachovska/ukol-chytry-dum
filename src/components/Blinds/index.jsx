@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState} from 'react';
+import './style.css';
 
 import blindsClosed from './images/blinds-closed.svg';
 import blindsOpen from './images/blinds-open.svg';
