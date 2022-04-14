@@ -3,6 +3,8 @@ import { useState } from 'react';
 import lightoff from './images/light-off.svg';
 import lighton from './images/light-on.svg';
 
+import './style.css';
+
 
 const Light= ({name, state}) => {
     const [stav, setStav]=useState(state);
