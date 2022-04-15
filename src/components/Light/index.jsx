@@ -15,7 +15,6 @@ const Light= ({name, state}) => {
 	} else {
 		setStateOn('off') 
 	}
-		console.log(state)
 	  }
 	return (
         <>
