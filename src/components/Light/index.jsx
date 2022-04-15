@@ -10,7 +10,7 @@ const Light= ({name, state}) => {
     const [stateOn, setStateOn]=useState(state);
 
 	const handleClick = () => {
-		if (state===('off'))
+		if (stateOn===('off'))
 		{setStateOn('on')
 	} else {
 		setStateOn('off') 
@@ -21,7 +21,7 @@ const Light= ({name, state}) => {
         <>
         <div className='light' onClick={handleClick}>
 					<div className="light__icon">
-						<img src={(state===('off')) ? lightoff : lighton}/>
+						<img src={(stateOn===('off')) ? lightoff : lighton}/>
 					</div>
 					<div className="light__name">
 						{name}
