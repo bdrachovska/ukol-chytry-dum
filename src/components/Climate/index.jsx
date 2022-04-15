@@ -2,7 +2,7 @@ import React from 'react';
 import {useState} from 'react';
 import './style.css';
 
-import temperature from './images/temp.svg';
+import temp from './images/temp.svg';
 
 const Climate = ({temperature, humidity}) => {
     const [teplota, setTeplota] = useState(temperature)
@@ -18,10 +18,10 @@ const Climate = ({temperature, humidity}) => {
     return (
 			<div className="climate">
 				<div className="climate__icon">
-					<img src={temperature} />
+					<img src={temp} />
 				</div>
 				<div className="climate__content">
-					<div className="climate__temperature">{teplota}&deg;C</div>
+					<div className="climate__temperature">{temperature}&deg;C</div>
 					<div className="climate__humidity">Vlhost vzduchu {humidity}&nbsp;%</div>
 				</div>
 				<div className="climate__controls">

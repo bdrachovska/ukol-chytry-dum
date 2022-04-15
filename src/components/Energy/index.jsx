@@ -1,6 +1,9 @@
 import React from 'react';
 import './style.css';
 
+import el from './images/electricity.svg';
+import wat from './images/water.svg';
+
 
 
 const Energy= ({electricity, water}) => {
@@ -9,7 +12,7 @@ const Energy= ({electricity, water}) => {
 <div className="energy">
 				<div className="energy__source">
 					<div className="energy__icon">
-						<img src="./images/electricity.svg"/>
+						<img src={el}/>
 					</div>
 					<div className="energy__consumption">
 						<div className="energy__description">Elektřina</div>
@@ -18,7 +21,7 @@ const Energy= ({electricity, water}) => {
 				</div>
 				<div className="energy__source">
 					<div className="energy__icon">
-						<img src="./images/water.svg"/>
+						<img src={wat}/>
 					</div>
 					<div className="energy__consumption">
 						<div className="energy__description">Voda</div>
@@ -31,4 +34,4 @@ const Energy= ({electricity, water}) => {
 
 
 
-export default Header;
+export default Energy;

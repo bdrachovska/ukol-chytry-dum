@@ -15,14 +15,14 @@ const Blinds= ({state}) => {
         setStavZaluzie('closed');
     }
     return (
-<div class="blinds">
-				<div class="blinds__icon">
+<div className="blinds">
+				<div className="blinds__icon">
                     <img src={(stavZaluzie=== 'open') ? blindsOpen : blindsClosed}/>
 				</div>
-				<div class="blinds__name">
+				<div className="blinds__name">
 					Žaluzie
 				</div>
-				<div class="blinds__controls">
+				<div className="blinds__controls">
 				<button className={(stavZaluzie=== 'open') ? "button button--active" : "button"} onClick={handleClickOpen}>Otevřeno</button>
 				<button className={(stavZaluzie=== 'closed') ? "button button--active" : "button"} onClick={handleClickClosed}>Zavřeno</button>
 				</div>
