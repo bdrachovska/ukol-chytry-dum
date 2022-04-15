@@ -7,16 +7,21 @@ import './style.css';
 
 
 const Light= ({name, state}) => {
-    const [stav, setStav]=useState(state);
+    const [stateOn, setStateOn]=useState(state);
 
 	const handleClick = () => {
-		{(state===true) ? stav = false : stav = true}
+		if (state===('off'))
+		{setStateOn('on')
+	} else {
+		setStateOn('off') 
+	}
+		console.log(state)
 	  }
 	return (
         <>
         <div className='light' onClick={handleClick}>
 					<div className="light__icon">
-						<img src={(state===false) ? lightoff : lighton}/>
+						<img src={(state===('off')) ? lightoff : lighton}/>
 					</div>
 					<div className="light__name">
 						{name}
