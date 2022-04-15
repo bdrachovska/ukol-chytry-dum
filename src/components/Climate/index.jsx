@@ -5,15 +5,7 @@ import './style.css';
 import temp from './images/temp.svg';
 
 const Climate = ({temperature, humidity}) => {
-    const [teplota, setTeplota] = useState(temperature)
-
-    const handleClickPlus = () => {
-      setTeplota(teplota + 1)
-    }
-
-    const handleClickMinus = () => {
-      setTeplota(teplota - 1)
-    }
+    const [tempChange, setTempChange] = useState(temperature)
 
     return (
 			<div className="climate">
@@ -21,12 +13,12 @@ const Climate = ({temperature, humidity}) => {
 					<img src={temp} />
 				</div>
 				<div className="climate__content">
-					<div className="climate__temperature">{temperature}&deg;C</div>
+					<div className="climate__temperature">{tempChange}&deg;C</div>
 					<div className="climate__humidity">Vlhost vzduchu {humidity}&nbsp;%</div>
 				</div>
 				<div className="climate__controls">
-					<button className="button" onClick={handleClickPlus}>+</button>
-					<button className="button" onClick={handleClickMinus}>-</button>
+					<button onClick={() => {setTempChange(tempChange + 1)}} className="button" >+</button>
+					<button onClick={() => {setTempChange(tempChange - 1)}} className="button" >-</button>
 				</div>
 			</div>
   );
